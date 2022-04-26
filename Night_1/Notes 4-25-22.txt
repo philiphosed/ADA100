@@ -1,0 +1,41 @@
+muljadibudiman@gmail.com
+
+work is done on learn on demand/ https://slu.learnondemand.net/User/Login?ReturnUrl=%2F
+
+dmpme@hotmail.com
+Pa$$w0rd
+
+vm will reset if no login for 5 days
+
+-- comments
+
+variableName : variableType := value
+
+with Ada.Text_IO;
+use Ada.Text_IO; removes prefix for function name in procedure
+
+Ada.Text_IO.Put_Line vs Put_Line
+
+'Character'
+"String"
+
+local procedure is available to overall procedure it is written in, makes it 'private'
+
+
+syntax for procedures:
+
+   procedure <name> (param1Name : [in out] type, ...)
+
+   in only parameter means it will stay the same
+
+   out is change in value output
+
+multiple parameters are seperated by semicolons not commas
+
+ads(spec file), write out variable, procedures and overloading
+
+adb(body file), implementation of the ads 
+
+next lab will have simple sum
+
+
