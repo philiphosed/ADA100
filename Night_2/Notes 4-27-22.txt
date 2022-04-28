@@ -44,6 +44,7 @@ Ada.Integer_text_IO
 
 methods with no return are better for memory management
 
+dividing integer by 10 will truncate any decimal place values
 
 
 

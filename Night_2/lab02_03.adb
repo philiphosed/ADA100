@@ -1,5 +1,5 @@
-with Ada.Text_IO, Ada.Integer_IO;
-use Ada.Text_IO, Ada.Integer_IO;
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use Ada.Text_IO, Ada.Integer_Text_IO;
 
 procedure lab02_03 is
    int1, int2, int3 : Integer;
