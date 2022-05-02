@@ -14,7 +14,7 @@ procedure lab04 is
 
       temp := Large_INT;
 
-      while temp > 10 loop
+      while temp >= 10 loop
 
          temp := temp / 10;
 
