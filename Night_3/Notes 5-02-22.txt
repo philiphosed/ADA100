@@ -48,6 +48,61 @@ dividing integer by 10 will truncate any decimal place values
 
 Lab 4 review
 
+String concatination using & and Integer`image attribute
+
+types:
+
+integer 
+string
+boolean
+natural
+Float
+
+range for loop
+
+  for Index in 1..5 loop
+  end loop
+
+dice_value := Integer range 1..6;
+
+subtype:
+type Dice_Valid_Values is range 1..6;
+dice_value: Dice_Valid_Values;
+
+setting dice_value := 0; raises exception
+
+type conversion of same type range and values: dice_value := Dice_Valid_Values(Integer)
+
+type Person_Age is range 0..150;
+subtype Child_Age is Person_age range Person_age`First..17;
+subtype Adult_Age is Person_age range Person_age 18..62;
+subtype Senior_Age is Person_age range Person_age 63..Person_Age`Last;
+
+Float
+in general are unranged min or maximum
+
+Cannot do arithmetic of floats with ints, must do conversion
+
+Floating point arithmetic are weird and not truly accurate unless explicit
+
+type Money is delta 0.01 digits 14; we care about the 14th decimal value for money type
+
+quick rename: package Money_IO is new Ada.Text_IO.Decimal_IO(Money);
+
+Strings and interesting behavior
+
+declaring empty string cannot happen
+
+strings are an array of character, allowed to give range of string for how many characters it needs
+
+must use full size of string to it
+
+enumerations: small set of values for a type
+
+enum calling starts with 0
+
+unbounded strings get over the limited nature of strings by not requiring range for strings. Unfortunatly they are very memory expensive. 
+
 
 
 
