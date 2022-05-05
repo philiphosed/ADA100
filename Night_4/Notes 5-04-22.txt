@@ -1,0 +1,141 @@
+muljadibudiman@gmail.com
+
+work is done on learn on demand/ https://slu.learnondemand.net/User/Login?ReturnUrl=%2F
+
+dmpme@hotmail.com
+Pa$$w0rd
+
+vm will reset if no login for 5 days
+
+-- comments
+
+variableName : variableType := value
+
+with Ada.Text_IO;
+use Ada.Text_IO; removes prefix for function name in procedure
+
+Ada.Text_IO.Put_Line vs Put_Line
+
+'Character'
+"String"
+
+local procedure is available to overall procedure it is written in, makes it 'private'
+
+
+syntax for procedures:
+
+   procedure <name> (param1Name : [in out] type, ...)
+
+   in only parameter means it will stay the same
+
+   out is change in value output
+
+multiple parameters are seperated by semicolons not commas
+
+ads(spec file), write out variable, procedures and overloading
+
+adb(body file), implementation of the ads 
+
+next lab will have simple sum
+
+attribute `first and `last
+
+Ada.Integer_text_IO
+
+methods with no return are better for memory management
+
+dividing integer by 10 will truncate any decimal place values
+
+Lab 4 review
+
+String concatination using & and Integer`image attribute
+
+types:
+
+integer 
+string
+boolean
+natural
+Float
+
+range for loop
+
+  for Index in 1..5 loop
+  end loop
+
+dice_value := Integer range 1..6;
+
+subtype:
+type Dice_Valid_Values is range 1..6;
+dice_value: Dice_Valid_Values;
+
+setting dice_value := 0; raises exception
+
+type conversion of same type range and values: dice_value := Dice_Valid_Values(Integer)
+
+type Person_Age is range 0..150;
+subtype Child_Age is Person_age range Person_age`First..17;
+subtype Adult_Age is Person_age range Person_age 18..62;
+subtype Senior_Age is Person_age range Person_age 63..Person_Age`Last;
+
+Float
+in general are unranged min or maximum
+
+Cannot do arithmetic of floats with ints, must do conversion
+
+Floating point arithmetic are weird and not truly accurate unless explicit
+
+type Money is delta 0.01 digits 14; we care about the 14th decimal value for money type
+
+quick rename: package Money_IO is new Ada.Text_IO.Decimal_IO(Money);
+
+Strings and interesting behavior
+
+declaring empty string cannot happen
+
+strings are an array of character, allowed to give range of string for how many characters it needs
+
+must use full size of string to it
+
+enumerations: small set of values for a type
+
+enum calling starts with 0
+
+unbounded strings get over the limited nature of strings by not requiring range for strings. Unfortunatly they are very memory expensive. 
+
+arrays must set range of size of the array not dynamic
+
+float`image to be used for put method or use package Ada.Float_Text_IO
+
+packages, with clause. Ada's library set of code 
+
+.ads is Ada spec file, package
+
+local procedure and types for example can live in spec files, cannot contain code body
+
+need .adb to be where the function is actually listed as what is happening, package body
+
+name of adb and ads needs to be the same
+
+Records, complex object, essnetially long list of item. Kinda like dictionary but all of it needs to be filled in. 
+
+private objects is to tell Ada that this item is not to be visible to the outside, cant set it outside out of private declaration.
+
+can still set it but need to use procedure
+
+type tagged creates a class, signs it as the original object
+
+type Figure is tagged... # main class
+
+type Circle is new Figure with...  #subclass
+
+if you create subclass, you must recreate all the functions for the subclasses that were in class that you wanna use
+
+type Square is new Rectangle with Null record #same as parent class Rectangle but nothing new
+
+
+
+
+
+
+
