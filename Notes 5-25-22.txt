@@ -103,6 +103,67 @@ enum calling starts with 0
 
 unbounded strings get over the limited nature of strings by not requiring range for strings. Unfortunatly they are very memory expensive. 
 
+arrays must set range of size of the array not dynamic
+
+float`image to be used for put method or use package Ada.Float_Text_IO
+
+packages, with clause. Ada's library set of code 
+
+.ads is Ada spec file, package
+
+local procedure and types for example can live in spec files, cannot contain code body
+
+need .adb to be where the function is actually listed as what is happening, package body
+
+name of adb and ads needs to be the same
+
+Records, complex object, essnetially long list of item. Kinda like dictionary but all of it needs to be filled in. 
+
+private objects is to tell Ada that this item is not to be visible to the outside, cant set it outside out of private declaration.
+
+can still set it but need to use procedure
+
+type tagged creates a class, signs it as the original object
+
+type Figure is tagged... # main class
+
+type Circle is new Figure with...  #subclass
+
+if you create subclass, you must recreate all the functions for the subclasses that were in class that you wanna use
+
+type Square is new Rectangle with Null record #same as parent class Rectangle but nothing new
+
+Similar to virtual void functions 
+
+polymorphism in Ada: function(F: Figure`Class); --F: An object that is a Figure that is derived from that class, accepts anything that is derived from Figure Class
+
+   
+stack(static memory) vs heap(dynamic)
+
+In stack FIFO, no longer available after use of method 
+
+bounded strings String25.Bounded_String
+
+setting range of strings to be memory effecient, good for database intereactions 
+
+OO Ada
+
+Put Constructors in Packages to get around making bunch of different constructors in adb
+
+primitive operations : tagged type inherited by all types derived from type
+
+Extending Tagged Type
+
+Abstract Type: cannot be instantiated
+
+Contact_Type, Personal_Contact_Type, Business_Contact_Type
+
+Dont need to make Contact_Type
+
+Can define primitive operations that return type itself for abstract
+
+otherwise operations needs to be abstract as well
+
 
 
 
